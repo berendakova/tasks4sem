@@ -1,0 +1,12 @@
+{
+    "name": "tanya/twig",
+    "authors": [
+        {
+            "name": "Tanya",
+            "email": "olga85138@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "^2.0"
+    }
+}

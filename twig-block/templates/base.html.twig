@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+<form method="post">
+    <p><b>Как по вашему мнению расшифровывается аббревиатура &quot;ОС&quot;?</b></p>
+    <p>
+        <input type="radio" name="answer" value="a1">{% block name1 %}{% endblock %}Офицерский состав<Br>
+        <input type="radio" name="answer" value="a2">{% block name2 %}{% endblock %}Операционная система<Br>
+        <input type="radio" name="answer" value="a3">{% block name3 %}{% endblock %}Большой полосатый мух</p>
+    <p>
+        <input type="submit"></p>
+</form>
+
+
+
+<div id="footer">
+    {% block footer %}
+        &copy; Copyright 2011 by you</a>.
+    {% endblock %}
+</div>
+</body>
+</html>

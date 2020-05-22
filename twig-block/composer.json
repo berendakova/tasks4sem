@@ -1,0 +1,13 @@
+{
+    "name": "tanya/twig_block",
+    "authors": [
+        {
+            "name": "Tanya",
+            "email": "olga85138@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "^2.0",
+      "ext-gd": "*"
+    }
+}

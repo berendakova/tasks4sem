@@ -1,0 +1,12 @@
+{
+    "name": "tanya/entity-manager",
+    "authors": [
+        {
+            "name": "Tanya",
+            "email": "olga85138@gmail.com"
+        }
+    ],
+    "require": {
+      "ext-pdo": "*"
+    }
+}

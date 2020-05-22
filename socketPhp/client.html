@@ -1,0 +1,48 @@
+<body onload="connect()">
+<h2>Server-Client-Chat</h2>
+Enter your text here: <input type="text" name="text" id="text"><button onclick="sendMessage($('#message').val())">Send</button>
+<ul id="messages">
+</ul>
+<script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+<script>
+    var webSocket;
+    function connect() {
+        webSocket = new WebSocket('ws://localhost:8080/test');
+
+        webSocket.onmessage = function receiveMessage(response) {
+            let data = response['data'];
+            $('#messages').first().after("<li>" +data + "</li>")
+        }
+    }
+
+    function sendMessage(text) {
+        webSocket.send(text);
+    }
+</script>
+</body>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <script>
+        ws = new WebSocket("ws://127.0.0.1:2346");
+
+        function sendFunc() {
+            let message = document.getElementById("message").value;
+            ws.send(message);
+        }
+        ws.onmessage = function (e) {
+            alert(  e.data);
+        };
+    </script>
+</head>
+<body>
+<input type="text" id="message" name="message">
+<input type="button" id="a" onclick="sendFunc()">
+</body>
+</html>
